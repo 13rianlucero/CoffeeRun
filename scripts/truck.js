@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
     'use strict';
 
     var App = window.App || {};
@@ -14,7 +14,7 @@
             console.log('Adding order for ' + order.emailAddress);
             this.db.add(order.emailAddress, order);
         }
-        deliverOrder(customerId) { 
+        deliverOrder(customerId) {
             'use strict';
             console.log('Delivering order for ' + customerId);
             this.db.remove(customerId);
@@ -31,9 +31,18 @@
             'use strict';
             console.log('==================================== running tests for truck...');
 
-            truck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});
-            truck.createOrder({ emailAddress: 'dr@no.com', coffee: 'decaf'});
-            truck.createOrder({ emailAddress: 'm@bond.com', coffee: 'earl grey'});
+            truck.createOrder({
+                emailAddress: 'me@goldfinger.com',
+                coffee: 'double mocha'
+            });
+            truck.createOrder({
+                emailAddress: 'dr@no.com',
+                coffee: 'decaf'
+            });
+            truck.createOrder({
+                emailAddress: 'm@bond.com',
+                coffee: 'earl grey'
+            });
             truck.printOrders();
             truck.deliverOrder('dr@no.com');
             truck.deliverOrder('m@bond.com');

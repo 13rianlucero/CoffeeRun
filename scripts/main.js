@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
     'use strict';
     var FORM_SELECTOR = '[data-coffee-order="form"]';
     var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';

@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
     'use strict';
 
     var App = window.App || {};
@@ -7,10 +7,18 @@
             // console.log('running the DataStore function');
             this.data = {};
         }
-        add(key, val) { this.data[key] = val; }
-        get(key)      { return this.data[key]; }
-        getAll()      { return this.data; }
-        remove(key)   { delete this.data[key]; }
+        add(key, val) {
+            this.data[key] = val;
+        }
+        get(key) {
+            return this.data[key];
+        }
+        getAll() {
+            return this.data;
+        }
+        remove(key) {
+            delete this.data[key];
+        }
     }
 
     App.DataStore = DataStore;
